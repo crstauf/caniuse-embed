@@ -5,14 +5,14 @@ function caniuse_embed(feat,container = false,past = 3,future = 2,show_browsers 
 
 	this.get_json = function() {
 		var urls = [
-			'https://github.com/Fyrd/caniuse/raw/master/data.json',
-			'https://github.com/crstauf/caniuse-embed/raw/master/caniuse-data.json'
+			'https://raw.githubusercontent.com/Fyrd/caniuse/master/data.json',
+			'https://raw.githubusercontent.com/crstauf/caniuse-embed/master/caniuse-data.json'
 		];
 		var success = false;
-		for (var url in urls) {
+		for (var k in urls) {
 			if (true === success) break;
 			var request = new XMLHttpRequest();
-			request.open('GET', url, true);
+			request.open('GET', urls[k], true);
 	
 			request.onload = function() {
 				if (request.status >= 200 && request.status < 400) {
