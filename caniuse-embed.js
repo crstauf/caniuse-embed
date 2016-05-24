@@ -82,7 +82,7 @@ function caniuse_embed(feat,container = false,past = 3,future = 2,show_browsers 
 	this.output = function() {
 		var output = '';
 		if (!document.querySelector('#caniuse-embed-css'))
-			output += '<link id="caniuse-embed-css" rel="stylesheet" href="http://blossomcreative.dev/wp-content/themes/blossom/js/caniuse-embed.css" />';
+			output += '<link id="caniuse-embed-css" rel="stylesheet" href="https://cdn.rawgit.com/crstauf/caniuse-embed/a823bcb8ee00b830ba10de9ef50b29916697610b/caniuse-embed.css" />';
 
 		var time = new Date();
 		output += '<aside id="caniuse-embed-' + feat + '-' + time.getTime() + '" class="caniuse-embed feature-' + feat + '" style="visibility: hidden;">';
